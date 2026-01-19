@@ -10,9 +10,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   const navItems = [
     { label: "Visão Geral", path: "/", icon: LayoutDashboard },
-    { label: "Roadmap", path: "/roadmap", icon: Calendar },
-    { label: "Integrações", path: "/integrations", icon: Layers },
-    { label: "Configurações", path: "/settings", icon: Settings },
   ];
 
   return (
