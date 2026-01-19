@@ -1,6 +1,6 @@
 import { Link, useLocation } from "wouter";
 import { cn } from "@/lib/utils";
-import { LayoutDashboard, Calendar, Layers, Settings, Menu, X } from "lucide-react";
+import { LayoutDashboard, Calendar, Layers, Settings, Menu, X, ListTodo } from "lucide-react";
 import { useState } from "react";
 import { Button } from "./ui/button";
 
@@ -10,6 +10,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   const navItems = [
     { label: "Visão Geral", path: "/", icon: LayoutDashboard },
+    { label: "Semana 1", path: "/semana-1", icon: ListTodo },
   ];
 
   return (
