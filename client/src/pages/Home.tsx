@@ -7,10 +7,10 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   const stats = [
-    { label: "Progresso Total", value: "35%", icon: BarChart3, color: "text-primary" },
+    { label: "Progresso Total", value: "38%", icon: BarChart3, color: "text-primary" },
     { label: "Dias Restantes", value: "40", icon: Clock, color: "text-blue-400" },
     { label: "Integrações", value: "0/3", icon: Layers, color: "text-purple-400" },
-    { label: "Funcionalidades", value: "8/12", icon: Database, color: "text-green-400" },
+    { label: "Funcionalidades", value: "9/12", icon: Database, color: "text-green-400" },
   ];
 
   const timelineItems: TimelineItemProps[] = [
@@ -19,7 +19,7 @@ export default function Home() {
       date: "20 Jan - 26 Jan",
       title: "Fundações e Quick Wins",
       description: "Implementação do CRUD de contatos, finalização das abas de Produtos e RPS com dados reais.",
-      status: "completed",
+      status: "in-progress",
       type: "milestone"
     },
     {
