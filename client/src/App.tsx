@@ -6,6 +6,11 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import Semana1 from "./pages/Semana1";
+import Semana2 from "./pages/Semana2";
+import Semana3 from "./pages/Semana3";
+import Semana4 from "./pages/Semana4";
+import Semana5 from "./pages/Semana5";
+import Semana6 from "./pages/Semana6";
 
 
 function Router() {
@@ -13,6 +18,11 @@ function Router() {
     <Switch>
       <Route path={"/"} component={Home} />
       <Route path={"/semana-1"} component={Semana1} />
+      <Route path={"/semana-2"} component={Semana2} />
+      <Route path={"/semana-3"} component={Semana3} />
+      <Route path={"/semana-4"} component={Semana4} />
+      <Route path={"/semana-5"} component={Semana5} />
+      <Route path={"/semana-6"} component={Semana6} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

@@ -11,6 +11,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const navItems = [
     { label: "Visão Geral", path: "/", icon: LayoutDashboard },
     { label: "Semana 1", path: "/semana-1", icon: ListTodo },
+    { label: "Semana 2", path: "/semana-2", icon: ListTodo },
+    { label: "Semana 3", path: "/semana-3", icon: ListTodo },
+    { label: "Semana 4", path: "/semana-4", icon: ListTodo },
+    { label: "Semana 5", path: "/semana-5", icon: ListTodo },
+    { label: "Semana 6", path: "/semana-6", icon: ListTodo },
   ];
 
   return (
