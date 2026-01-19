@@ -18,7 +18,7 @@ export default function Semana1() {
       id: 2,
       title: "Finalizar Aba Produtos",
       description: "Integrar dados reais e remover mocks da aba de Produtos.",
-      status: "in_progress",
+      status: "completed",
       date: "23-24 Jan",
       impact: "Médio"
     },
@@ -26,7 +26,7 @@ export default function Semana1() {
       id: 3,
       title: "Finalizar Aba RPS",
       description: "Integrar dados reais e remover mocks da aba RPS.",
-      status: "pending",
+      status: "in_progress",
       date: "25-26 Jan",
       impact: "Médio"
     }
