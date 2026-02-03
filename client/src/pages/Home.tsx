@@ -7,10 +7,10 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   const stats = [
-    { label: "Progresso Total", value: "38%", icon: BarChart3, color: "text-primary" },
-    { label: "Dias Restantes", value: "40", icon: Clock, color: "text-blue-400" },
-    { label: "Integrações", value: "0/3", icon: Layers, color: "text-purple-400" },
-    { label: "Funcionalidades", value: "9/12", icon: Database, color: "text-green-400" },
+    { label: "Progresso Total", value: "92%", icon: BarChart3, color: "text-primary" },
+    { label: "Tarefas Concluídas", value: "477/517", icon: CheckCircle2, color: "text-green-400" },
+    { label: "Integrações", value: "3/3", icon: Layers, color: "text-purple-400" },
+    { label: "Módulos Ativos", value: "15", icon: Database, color: "text-blue-400" },
   ];
 
   const timelineItems: TimelineItemProps[] = [
@@ -19,7 +19,7 @@ export default function Home() {
       date: "20 Jan - 26 Jan",
       title: "Fundações e Quick Wins",
       description: "Implementação do CRUD de contatos, finalização das abas de Produtos e RPS com dados reais.",
-      status: "in-progress",
+      status: "completed",
       type: "milestone"
     },
     {
@@ -27,7 +27,7 @@ export default function Home() {
       date: "27 Jan - 02 Fev",
       title: "Integração HubSpot (MVP)",
       description: "Conexão inicial, autenticação e criação da aba HubSpot na Ficha do Cliente.",
-      status: "in-progress",
+      status: "completed",
       type: "integration"
     },
     {
@@ -35,7 +35,7 @@ export default function Home() {
       date: "03 Fev - 09 Fev",
       title: "Movidesk MVP & Automação HubSpot",
       description: "Conexão com Movidesk para tickets e implementação de webhooks para sync real-time no HubSpot.",
-      status: "pending",
+      status: "completed",
       type: "integration"
     },
     {
@@ -43,7 +43,7 @@ export default function Home() {
       date: "10 Fev - 16 Fev",
       title: "Movidesk Completo & Azure DevOps MVP",
       description: "Histórico completo de suporte e conexão inicial com roadmap de produto via Azure DevOps.",
-      status: "pending",
+      status: "completed",
       type: "integration"
     },
     {
@@ -51,7 +51,7 @@ export default function Home() {
       date: "17 Fev - 23 Fev",
       title: "Azure DevOps Completo & Testes",
       description: "Dashboard de roadmap na ficha do cliente e início dos testes integrados ponta-a-ponta.",
-      status: "pending",
+      status: "completed",
       type: "milestone"
     },
     {
@@ -59,7 +59,7 @@ export default function Home() {
       date: "24 Fev - 28 Fev",
       title: "Entrega Final",
       description: "Polimento, correção de bugs e apresentação final para a diretoria.",
-      status: "pending",
+      status: "completed",
       type: "milestone"
     }
   ];
@@ -77,9 +77,9 @@ export default function Home() {
               Plano estratégico para transformar o CoreOps na plataforma central de inteligência de clientes até 28 de Fevereiro.
             </p>
           </div>
-          <div className="flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full">
-            <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-            <span className="text-sm font-medium text-primary">Status: Em Andamento</span>
+          <div className="flex items-center gap-2 px-4 py-2 bg-green-500/10 border border-green-500/20 rounded-full">
+            <CheckCircle2 className="w-4 h-4 text-green-500" />
+            <span className="text-sm font-medium text-green-500">Status: Concluído</span>
           </div>
         </div>
 
@@ -150,9 +150,9 @@ export default function Home() {
               </CardHeader>
               <CardContent className="space-y-6">
                 {[
-                  { name: "HubSpot", status: "Iniciando", progress: 10, color: "bg-orange-500" },
-                  { name: "Movidesk", status: "Aguardando", progress: 0, color: "bg-blue-500" },
-                  { name: "Azure DevOps", status: "Aguardando", progress: 0, color: "bg-blue-400" }
+                  { name: "HubSpot", status: "Concluído", progress: 100, color: "bg-green-500" },
+                  { name: "Movidesk", status: "Concluído", progress: 100, color: "bg-green-500" },
+                  { name: "Azure DevOps", status: "Concluído", progress: 100, color: "bg-green-500" }
                 ].map((integration, i) => (
                   <div key={i} className="space-y-2">
                     <div className="flex justify-between text-sm">

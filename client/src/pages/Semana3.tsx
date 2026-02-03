@@ -8,18 +8,34 @@ export default function Semana3() {
   const tasks = [
     {
       id: 1,
-      title: "Movidesk MVP",
-      description: "Conexão, autenticação e busca de tickets e métricas de suporte.",
-      status: "pending",
+      title: "Integração Movidesk Completa",
+      description: "Sincronização de tickets, pessoas, contatos, emails e webhooks.",
+      status: "completed",
       date: "03-05 Fev",
-      impact: "Médio"
+      impact: "Alto"
     },
     {
       id: 2,
-      title: "HubSpot Avançada",
-      description: "Implementar sincronização automática e webhooks para atualizações em tempo real.",
-      status: "pending",
-      date: "06-09 Fev",
+      title: "Mapeamento Cliente-Movidesk",
+      description: "Sistema de vinculação automática e manual de clientes com contas Movidesk.",
+      status: "completed",
+      date: "05-06 Fev",
+      impact: "Alto"
+    },
+    {
+      id: 3,
+      title: "Repositório Movidesk",
+      description: "Interface de consulta e gerenciamento de dados sincronizados.",
+      status: "completed",
+      date: "07-08 Fev",
+      impact: "Médio"
+    },
+    {
+      id: 4,
+      title: "Dashboard de Métricas Semanais",
+      description: "Gráficos de evolução temporal e cards de resumo com Health Score.",
+      status: "completed",
+      date: "08-09 Fev",
       impact: "Alto"
     }
   ];
@@ -32,27 +48,27 @@ export default function Semana3() {
       <div className="space-y-8">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
           <div>
-            <h1 className="text-3xl font-bold tracking-tight text-white">Semana 3: Movidesk MVP e Automação</h1>
+            <h1 className="text-3xl font-bold tracking-tight text-white">Semana 3: Integrações e Dashboards</h1>
             <p className="text-slate-400 mt-2">
-              Início da integração com suporte e aprofundamento na automação de vendas.
+              Integração completa com Movidesk e implementação de dashboards de métricas.
             </p>
           </div>
-          <div className="flex items-center gap-2 bg-orange-500/10 px-4 py-2 rounded-lg border border-orange-500/20">
-            <Clock className="h-5 w-5 text-orange-500" />
-            <span className="font-medium text-orange-400">03 Fev - 09 Fev</span>
+          <div className="flex items-center gap-2 bg-green-500/10 px-4 py-2 rounded-lg border border-green-500/20">
+            <CheckCircle2 className="h-5 w-5 text-green-500" />
+            <span className="font-medium text-green-400">03 Fev - 09 Fev</span>
           </div>
         </div>
 
         {/* Progresso Geral */}
-        <Card className="border-l-4 border-l-orange-500 bg-slate-900/50 border-slate-800">
+        <Card className="border-l-4 border-l-green-500 bg-slate-900/50 border-slate-800">
           <CardHeader className="pb-2">
             <div className="flex justify-between items-center">
               <CardTitle className="text-lg font-medium text-white">Progresso da Semana</CardTitle>
-              <span className="text-sm font-bold text-orange-400">{Math.round(progress)}% Concluído</span>
+              <span className="text-sm font-bold text-green-400">{Math.round(progress)}% Concluído</span>
             </div>
           </CardHeader>
           <CardContent>
-            <Progress value={progress} className="h-2 bg-slate-800" indicatorClassName="bg-orange-500" />
+            <Progress value={progress} className="h-2 bg-slate-800" indicatorClassName="bg-green-500" />
             <p className="text-sm text-slate-400 mt-2">
               {completedTasks} de {tasks.length} atividades entregues.
             </p>
@@ -62,11 +78,11 @@ export default function Semana3() {
         {/* Lista de Atividades */}
         <div className="grid gap-6">
           <h2 className="text-xl font-semibold flex items-center gap-2 text-white">
-            <CheckCircle2 className="h-5 w-5 text-orange-500" />
-            Atividades Planejadas
+            <CheckCircle2 className="h-5 w-5 text-green-500" />
+            Atividades Concluídas
           </h2>
           
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {tasks.map((task) => (
               <Card key={task.id} className={`flex flex-col border-slate-800 bg-slate-900/30 ${task.status === 'completed' ? 'border-green-900/30 bg-green-900/10' : ''}`}>
                 <CardHeader>
@@ -104,34 +120,20 @@ export default function Semana3() {
           </div>
         </div>
 
-        {/* Próximos Passos */}
-        <Card className="bg-gradient-to-r from-slate-900 to-slate-800 border-slate-700">
+        {/* Conquistas da Semana */}
+        <Card className="bg-gradient-to-br from-green-900/20 to-slate-900/50 border-green-500/20">
           <CardHeader>
-            <CardTitle className="text-xl text-white">Próxima Fase: Movidesk Completa e Azure DevOps</CardTitle>
-            <CardDescription className="text-slate-400">
-              Prepare-se para a Semana 4 (10 Fev - 16 Fev)
-            </CardDescription>
+            <CardTitle className="text-xl font-display text-white flex items-center gap-2">
+              <CheckCircle2 className="h-6 w-6 text-green-500" />
+              Conquistas da Semana
+            </CardTitle>
           </CardHeader>
-          <CardContent>
-            <div className="flex flex-col md:flex-row gap-6 items-center">
-              <div className="flex-1 space-y-2">
-                <p className="text-sm text-slate-300">
-                  Na próxima semana, finalizaremos a integração com o Movidesk e iniciaremos a conexão
-                  estratégica com o Azure DevOps para o roadmap de produto.
-                </p>
-              </div>
-              <div className="flex items-center gap-4 bg-black/20 p-4 rounded-lg backdrop-blur-sm border border-white/5">
-                <div className="text-center">
-                  <p className="text-2xl font-bold text-orange-500">2.0</p>
-                  <p className="text-xs text-slate-400">Semanas</p>
-                </div>
-                <div className="h-8 w-px bg-white/10"></div>
-                <div>
-                  <p className="font-medium text-sm text-white">Duração Estimada</p>
-                  <p className="text-xs text-slate-400">Fase Operacional</p>
-                </div>
-              </div>
-            </div>
+          <CardContent className="space-y-3 text-slate-300">
+            <p>✅ <strong>Integração Movidesk</strong> completa com sync de tickets, pessoas e emails</p>
+            <p>✅ <strong>Mapeamento automático</strong> de clientes com contas Movidesk</p>
+            <p>✅ <strong>Dashboard de métricas</strong> com gráficos de evolução temporal</p>
+            <p>✅ <strong>Repositório centralizado</strong> de dados sincronizados</p>
+            <p>✅ <strong>Webhooks configurados</strong> para atualizações em tempo real</p>
           </CardContent>
         </Card>
       </div>
